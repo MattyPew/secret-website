@@ -1,21 +1,6 @@
-<script type="text/javascript">
-function goFullscreen(id) {
-  var element = document.getElementById(id);       
-  if (element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if (element.webkitRequestFullScreen) {
-    element.webkitRequestFullScreen();
-  }  
-}
-</script>
-
-
-//Html code:
-
-<video class="video_player" id="player" width="100%" controls="controls" autoplay="autoplay">
-  <source src="/glowup.mp4"/>
-  Your browser does not support the HTML5 video tag.  Use a better browser!
+<video id="glowup-video" class="glowup-video" style="visibility: hidden;">
+<source src="/glowup.mp4" type="video/mp4" />
 </video>
-<button onclick="goFullscreen('player'); return false">
-  View Fullscreen!
-</button>
+<div id="text" class="text"></div>
+<div id="map-container" class="map-container" style="visibility: hidden;">
+<img id="map">
